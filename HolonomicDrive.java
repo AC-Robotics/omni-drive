@@ -1,7 +1,7 @@
 /**
  *
- * Created by Maddie, FTC Team 4962, The Rockettes
- * version 1.0 Aug 11, 2016
+ * Created by , FTC Team 11779, Chrononauts
+ * version 1.0 Apr 13, 2017
  *
  */
 
@@ -26,9 +26,9 @@ import com.qualcomm.robotcore.util.Range;
         X                  X
      BL   XXXXXXXXXXXXXXXX   BR
 */
-@TeleOp(name = "Concept: HolonomicDrivetrain", group = "Concept")
+@TeleOp(name = "HolonomicDrive", group = "firstTest")
 //@Disabled
-public class ConceptHolonomicDrive extends OpMode {
+public class HolonomicDrive extends OpMode {
 
 	DcMotor motorFrontRight;
 	DcMotor motorFrontLeft;
@@ -38,7 +38,7 @@ public class ConceptHolonomicDrive extends OpMode {
 	/**
 	 * Constructor
 	 */
-	public ConceptHolonomicDrive() {
+	public HolonomicDrive() {
 
 	}
 
@@ -53,16 +53,16 @@ public class ConceptHolonomicDrive extends OpMode {
 		 */
 
 
-		motorFrontRight = hardwareMap.dcMotor.get("motor front right");
-		motorFrontLeft = hardwareMap.dcMotor.get("motor front left");
-		motorBackLeft = hardwareMap.dcMotor.get("motor back left");
-		motorBackRight = hardwareMap.dcMotor.get("motor back right");
+		motorFrontRight = hardwareMap.dcMotor.get("DCmotor Neverest FR");
+		motorFrontLeft = hardwareMap.dcMotor.get("DCmotor Neverest FL");
+		motorBackLeft = hardwareMap.dcMotor.get("DCmotor Neverest BL");
+		motorBackRight = hardwareMap.dcMotor.get("DCmotor Neverest BR");
 		//These work without reversing (Tetrix motors).
 		//AndyMark motors may be opposite, in which case uncomment these lines:
-		//motorFrontLeft.setDirection(DcMotor.Direction.REVERSE);
-		//motorBackLeft.setDirection(DcMotor.Direction.REVERSE);
-		//motorFrontRight.setDirection(DcMotor.Direction.REVERSE);
-		//motorBackRight.setDirection(DcMotor.Direction.REVERSE);
+		motorFrontLeft.setDirection(DcMotor.Direction.REVERSE);
+		motorBackLeft.setDirection(DcMotor.Direction.REVERSE);
+		motorFrontRight.setDirection(DcMotor.Direction.REVERSE);
+		motorBackRight.setDirection(DcMotor.Direction.REVERSE);
 
 	}
 
